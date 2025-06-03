@@ -1,0 +1,71 @@
+# .dockerignore
+
+# Python specific
+__pycache__/
+*.py[cod]
+*$py.class
+pip-log.txt
+pip-delete-this-directory.txt
+celerybeat-schedule
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+venv.bak/
+ENV.bak/
+
+# IDE and editor specific files
+.vscode/
+.idea/
+*.project
+*.pydevproject
+.project
+.settings/
+*.sublime-workspace
+*.sublime-project
+nbproject/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Git files
+.git
+.gitignore
+.gitattributes
+
+# Docker files (the ignore file itself)
+.dockerignore
+
+# SSL Certificates (these should be volume-mounted at runtime, not built into the image)
+# If your 'certs' directory is inside the build context and you only ever
+# use volume mounts for them, you can uncomment the line below.
+# However, if you want them copied as a fallback (not recommended for production secrets), keep it commented.
+# For the CMD in your Dockerfile that references /app/certs, copying them via `COPY . .`
+# and then overlaying with a volume mount is a common pattern.
+# certs/
+# *.pem # Or be more specific if you have other .pem files not for SSL
+
+# Test files and coverage reports (if you don't want them in the final image)
+tests/
+*.test.py
+.pytest_cache/
+coverage.xml
+.coverage
+htmlcov/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+*.egg
+
+# Logs
+*.log
+logs/
+
+# Other temporary or local files
+local_settings.py
